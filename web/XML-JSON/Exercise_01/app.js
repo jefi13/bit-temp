@@ -1,5 +1,6 @@
 'use strict';
 
+// XML
 function request(ip) {
     var xhr = new XMLHttpRequest();
 
@@ -8,7 +9,6 @@ function request(ip) {
     xhr.send();
 
     xhr.onload = function () {
-
         var xmlDoc = xhr.responseXML;
 
         var a = xmlDoc.querySelector("CountryName").textContent;
@@ -16,7 +16,6 @@ function request(ip) {
         var h1 = document.querySelector("#countryName");
 
         h1.textContent = a;
-
     }
 }
 

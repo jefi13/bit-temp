@@ -1,0 +1,11 @@
+.nav-wrapper {
+    text-align: center;
+}
+
+.row .col.m6 {
+    margin: 0 auto;
+}
+
+.row .col {
+    float: unset;
+}

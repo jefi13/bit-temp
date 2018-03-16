@@ -8,7 +8,7 @@ $(function () {
             const request = $.ajax('https://api.github.com/search/users?q=' + $inputData + 'in:login');
 
             request.done((msg) => {
-                msg.items.forEach((element, i) => {
+                msg.items.forEach((element) => {
                     console.log(msg);
 
                     const img = $('<img>');

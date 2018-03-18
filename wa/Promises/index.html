@@ -7,6 +7,7 @@
 </head>
 
 <body>
+    <h1>Look at Developer Tools > Console</h1>
 
     <script>
         let promises = [];
@@ -14,7 +15,6 @@
         for (let i = 0; i < 100; i++) {
             const promise = new Promise(function (resolve, reject) {
                     setTimeout(function () {
-                        // console.log(`from promise ${i+1}`);
                         resolve();
                     }, i * 10);
                 })

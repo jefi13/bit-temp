@@ -1,11 +1,14 @@
 import React from 'react';
-// import UserLists from './UsersList'
+import UsersList from './UsersList';
 
 const Main = (props) => {
     const { data } = props;
+
     return (
         <div className="container">
-            {/* <UsersList posts={users} /> */}
+            <div className="row">
+                <UsersList users={data} />
+            </div>
         </div>
     )
 }

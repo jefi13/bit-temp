@@ -5,8 +5,8 @@ class Name {
         this.last = last;
     }
 
-    getName() {
-        return `name: ${this.first}`;
+    getFirstName() {
+        return this.first;
     }
 }
 

@@ -1,25 +1,20 @@
 const products = ['apples', 'oranges', 'bananas'];
 
 const createProducts = () => {
-    // const myProducts = [];
-
-    // products.forEach((product, index) => {
-    //     myProducts.push(<Product name={product} key={index} />);
-    // })
-
-    // return myProducts;
-
     return products.map((product, index) => {
         const name = product.toUpperCase();
 
         return <Product name={name} key={index} />;
-    })
+    });
 
 }
 
 const Product = (props) => {
     const { name, index } = props;
-    return <li key={index}>{name}</li>;
+
+    return (<li key={index}>
+        {name}
+    </li>);
 }
 
 const ShoppingList = () => {

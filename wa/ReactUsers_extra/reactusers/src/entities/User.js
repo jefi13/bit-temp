@@ -4,27 +4,40 @@ import Email from './Email';
 import Dob from './Dob';
 
 class User {
-    constructor(picture, name, email, dob) {
+    constructor(picture, name, email, dob, gender) {
         this.picture = new Picture(picture.large, picture.medium, picture.thumbnail);
         this.name = new Name(name.title, name.first, name.last);
         this.email = new Email(email);
         this.dob = new Dob(dob);
+        this.gender = gender;
     }
 
     getPicture() {
         return this.picture.getLarge();
     }
 
-    getName() {
+    getFullName() {
+        return this.name.getFullName();
+    }
+
+    getFirstName() {
         return this.name.getFirstName();
     }
 
     getEmail() {
-        return `email: ${this.email.hideEmail()}`;
+        return `${this.email.hideEmail()}`;
     }
 
     getDob() {
-        return `date of birth: ${this.dob.formatDate()}`;
+        return `${this.dob.formatDate()}`;
+    }
+
+    getGender() {
+        if (this.gender === 'female') {
+            return 'card red lighten-5';
+        } else {
+            return 'card';
+        }
     }
 }
 

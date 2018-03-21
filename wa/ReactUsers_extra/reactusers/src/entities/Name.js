@@ -8,6 +8,10 @@ class Name {
     getFirstName() {
         return this.first;
     }
+
+    getFullName() {
+        return `${this.first} ${this.last}`;
+    }
 }
 
 export default Name;

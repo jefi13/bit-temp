@@ -1,0 +1,10 @@
+.logo {
+    font-size: 2rem;
+}
+
+input[type=search]:not(.browser-default){
+    margin-bottom: 0;
+}
+.row {
+    margin-bottom: 0;
+}

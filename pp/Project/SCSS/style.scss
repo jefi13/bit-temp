@@ -1,0 +1,97 @@
+@import "variables";
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-light{
+    background-color: $backNavColor !important;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+    &:hover{
+        color:white;
+    }
+}
+
+input[type=search]{
+    padding-left: 5px;
+    border-radius: 5px;
+   position: relative;
+}
+
+h1 {
+    margin: 3% 0;
+    text-align: center;
+}
+
+.card {
+    @media(max-width:576px) {
+        margin: 0 12% 5%;
+    }
+    @media(min-width:720px) {
+        margin: 0 0 5%;
+    }
+}
+
+h4 {
+    padding: 5% 0 5% 3%;
+    color:#58A4FF;
+    font-size: 1rem;
+    margin:0;
+}
+
+.copyright {
+    color: white;
+    text-align: center;
+    padding: 2% 0;
+    margin:0;
+}
+
+.footer {
+    background-color: $backNavColor;
+    height:10%;
+}
+
+.shows {
+    display: none;
+    background-color: white;
+    list-style-type: none;
+    position: absolute;
+    margin: 0;
+    padding: 5px;
+    width: 185px; 
+    border: 1px solid black;
+    li{
+        border-bottom: 1px solid  $backNavColor;
+        cursor: pointer;
+    }
+    li:last-child{
+        border-bottom: none;
+    }
+    z-index: 1;
+}
+
+.showImg {
+    width:500px;
+    @media(max-width:576px) {
+       width: 80%;
+       margin: 0 auto;
+       display: block;
+    }
+
+    @media(min-width:720px) {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+p{
+    margin-top: 30px;
+}
+
+h3 {
+    margin: 3% 0 0 1%;
+}

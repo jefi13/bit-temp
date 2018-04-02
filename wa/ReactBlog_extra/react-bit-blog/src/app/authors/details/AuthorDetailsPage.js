@@ -15,14 +15,22 @@ class AuthorDetailsPage extends Component {
         };
     }
 
-    componentDidMount() {
-        const { match: { params } } = this.props;
+    loadAuthor(props) {
+        const { match: { params } } = props;
         const authorId = params.authorId;
 
         authorService.fetchAuthorDetails(authorId)
             .then(author => {
                 this.setState({ author });
             });
+    }
+
+    componentDidMount() {
+        this.loadAuthor(this.props);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.loadAuthor(nextProps);
     }
 
     render() {

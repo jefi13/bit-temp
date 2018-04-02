@@ -1,3 +1,5 @@
+import { constants } from './../shared/constants';
+
 class GeoLocation {
     constructor({ lat, lng }) {
         this.latitude = lat;
@@ -5,7 +7,11 @@ class GeoLocation {
     }
 
     getGoogleMapUrl() {
-        return `https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11322.276616522473!2d${this.latitude}!3d${this.longitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssr!2srs!4v1521902112484`;
+        return `https://www.google.com/maps/embed/v1/view
+            ?key=${constants.GOOGLE_MAPS_API_KEY}
+            &center=${this.latitude},${this.longitude}
+            &zoom=18
+            &maptype=satellite`;
     }
 }
 

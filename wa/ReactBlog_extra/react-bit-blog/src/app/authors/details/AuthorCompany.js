@@ -1,7 +1,7 @@
 import React from 'react';
 
-const AuthorCompany = (props) => {
-    const { name, slogan } = props;
+const AuthorCompany = ({ authorCompany }) => {
+    const { name, slogan } = authorCompany;
 
     return (
         <div className="col s12">

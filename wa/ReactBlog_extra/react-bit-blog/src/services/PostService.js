@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-import { BASE_API_ENDPOINT } from './../shared/constants';
+import { constants } from './../shared/constants';
 import { Post } from './../models/Post';
 
 class PostService {
     fetchPosts() {
-        const requestUrl = `${BASE_API_ENDPOINT}/posts`;
+        const requestUrl = `${constants.BASE_API_ENDPOINT}/posts`;
 
         return axios.get(requestUrl)
             .then(({ data }) => {
@@ -16,7 +16,7 @@ class PostService {
     }
 
     fetchPostDetails(postId) {
-        const requestUrl = `${BASE_API_ENDPOINT}/posts/${postId}`;
+        const requestUrl = `${constants.BASE_API_ENDPOINT}/posts/${postId}`;
 
         return axios.get(requestUrl)
             .then(({ data }) => {
@@ -25,7 +25,7 @@ class PostService {
     }
 
     fetchAuthorPosts(authorId) {
-        const requestUrl = `${BASE_API_ENDPOINT}/posts`;
+        const requestUrl = `${constants.BASE_API_ENDPOINT}/posts`;
 
         const options = {
             params: {

@@ -1,13 +1,14 @@
 import React from 'react';
 
-const AuthorInfo = (props) => {
-    const { name, username, email, phone } = props;
+const AuthorInfo = ({ authorInfo }) => {
+
+    const { name, username, email, phone } = authorInfo;
 
     return (
         <div className="col s12">
             <div className="card horizontal blue lighten-3">
                 <div className="card-image">
-                    <img src="https://via.placeholder.com/200x200/0d47a1/fff" alt="" />
+                    <img src="https://via.placeholder.com/200/0d47a1/fff?text=Author+picture" alt="" />
                 </div>
                 <div className="card-stacked">
                     <div className="card-content blue-text text-darken-4">

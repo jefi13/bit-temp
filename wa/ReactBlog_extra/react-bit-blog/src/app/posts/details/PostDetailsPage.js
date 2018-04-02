@@ -6,7 +6,6 @@ import { PostsFromAuthor } from './PostsFromAuthor';
 import { postService } from './../../../services/PostService';
 
 class PostDetailsPage extends Component {
-
     constructor(props) {
         super(props);
 
